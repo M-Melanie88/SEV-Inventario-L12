@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Validator;
 
 use App\Models\User;
-use Validator;
 
 class AuthController extends Controller
 {
@@ -31,6 +30,8 @@ class AuthController extends Controller
         $user->name = request()->name;
         $user->email = request()->email;
         $user->password = bcrypt(request()->password);
+        $user->id_rol = 1;
+        $user->id_department = request()->id_department;
         $user->save();
   
         return response()->json($user, 201);
