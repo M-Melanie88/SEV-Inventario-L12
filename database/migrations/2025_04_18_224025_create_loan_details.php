@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('loan_detail', function (Blueprint $table) {
+        Schema::create('loan_details', function (Blueprint $table) {
             $table->id('id'); // id_detalle_prestamo
             $table->unsignedBigInteger('equipment_type_id'); // id_tipo_equipo
             $table->text('description'); // descripcion
@@ -25,7 +25,7 @@ return new class extends Migration
             
 
             // Foreign key example if related to tipo_equipo table
-            $table->foreign('equipment_type_id')->references('id')->on('type_of_equipment');
+            $table->foreign('equipment_type_id')->references('id')->on('equipment_type');
         });
     }
 

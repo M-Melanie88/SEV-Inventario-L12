@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LoanDetail extends Model
+class LoanDetails extends Model
 {
     protected $fillable = [
-        'loan_id', 'equipment_type_id', 'description', 'brand', 'model',
-        'quantity', 'serial_number', 'inventory_number', 'notes'
+        'equipment_type_id', 'description', 'brand', 'model',
+        'quantity', 'serial_number', 'inventory_code', 'remarks'
     ];
 
     public function loan()

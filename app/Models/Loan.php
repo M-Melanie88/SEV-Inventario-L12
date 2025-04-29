@@ -23,16 +23,13 @@ class Loan extends Model
 
     public function detail()
     {
-        return $this->belongsTo(LoanDetail::class, 'loan_detail_id');
+        return $this->belongsTo(LoanDetails::class, 'loan_detail_id');
     }
 
     public function return()
     {
-        return $this->hasOne(ReturnEntry::class, 'loan_id');
+        return $this->hasOne(Returns::class, 'loan_id');
     }
 
-    public function history()
-    {
-        return $this->hasMany(LoanHistory::class);
-    }
+ 
 }

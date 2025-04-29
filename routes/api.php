@@ -38,7 +38,7 @@ Route::apiResource('consumable-vouchers', ConsumableVoucherController::class);
 Route::apiResource('consumable-voucher-details', ConsumableVoucherDetailController::class);
 Route::apiResource('consumable-types', ConsumableTypeController::class);
 Route::apiResource('loans', LoanController::class);
-Route::apiResource('loan-details', LoanDetailController::class);
+Route::apiResource('loan-detail', LoanDetailController::class);
 Route::apiResource('equipment-types', EquipmentTypeController::class);
 Route::apiResource('returns', ReturnEntryController::class);
 Route::apiResource('loan-histories', LoanHistoryController::class);

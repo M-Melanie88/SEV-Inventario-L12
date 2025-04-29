@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ReturnEntry extends Model
+class Returns extends Model
 {
     protected $fillable = ['loan_id', 'return_date', 'notes'];
 

@@ -10,7 +10,7 @@ class LoanController extends Controller
 {
     public function index()
     {
-        return Loan::with(['user', 'signer', 'detail', 'history'])->get();
+        return Loan::with(['user', 'signer', 'detail'])->get();
     }
 
     public function store(Request $request)
@@ -20,7 +20,7 @@ class LoanController extends Controller
 
     public function show(Loan $loan)
     {
-        return $loan->load(['user', 'signer', 'detail', 'history']);
+        return $loan->load(['user', 'signer', 'detail']);
     }
 
     public function update(Request $request, Loan $loan)
