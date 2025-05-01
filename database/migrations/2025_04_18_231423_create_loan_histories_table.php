@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('loan_history', function (Blueprint $table) {
+        Schema::create('loan_histories', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('loan_id');
             $table->date('movement_date');
-            $table->enum('movement_type', ['loan', 'return']);
+            $table->string('movement_type');
             $table->timestamps();
 
             // Foreign key to loans
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('loan_history');
+        Schema::dropIfExists('loan_histories');
     }
 };

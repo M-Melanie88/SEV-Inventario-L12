@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ConsumableType extends Model
 {
-    protected $fillable = ['description', 'brand', 'model', 'capacity', 'expiration_date'];
+    protected $fillable = ['description', 'brand', 'model', 'capacity', 'lapsed_closure'];
 
 }

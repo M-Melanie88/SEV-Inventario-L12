@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ConsumableVoucherDetail extends Model
+class DetailVoucher extends Model
 {
-    protected $fillable = ['voucher_id', 'consumable_type_id', 'quantity'];
+    protected $fillable = ['id_voucher', 'id_consumable', 'quantity'];
 
     public function voucher()
     {
-        return $this->belongsTo(ConsumableVoucher::class);
+        return $this->belongsTo(Voucher::class);
     }
 
     public function consumableType()
